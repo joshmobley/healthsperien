@@ -1,0 +1,116 @@
+.footer {
+    background: $dark-grey;
+    color: $grey;
+    padding: 2rem 2rem 4rem;
+
+    .logo {
+        display: inline-block;
+        background: url('../assets/logo.png') no-repeat bottom left;
+        height: 50px;
+        width: 220px;
+        background-size: contain;
+        text-indent: -9999em;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: $grey;
+        transition: color .3s;
+
+        &:hover {
+            color: $light-blue;
+        }
+    }
+
+    &__nav {
+        margin: 2rem 0;
+        ul li {
+            list-style: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            > a { color: $white; }
+
+            + li {
+                margin: 1rem 0;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: .7rem;
+        color: #666;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding: 2rem 4rem 6rem;
+        position: relative;
+
+        &__nav {
+            position: absolute;
+            right: 4rem;
+            top: 2rem;
+            margin: 1rem 0 0;
+
+            > ul {
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            > li {
+                display: inline-block;
+                display: flex;
+                flex-direction: column;
+
+                + li {
+                    margin: 0 0 0 2rem;
+                }
+
+                ul {
+                    display: block;
+                    margin-top: .5rem;
+
+                    li {
+                        font-size: .8rem;
+                        text-transform: none;
+                        margin: 0;
+
+                        a {
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+            }
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 1rem;
+            right: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .footer {
+        padding: 2rem 6rem 6rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        .logo {
+            margin-left: -56px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.tabs {
+
+    &__control{
+        background: $dark-blue;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        padding: .75rem 1.5rem;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover {
+            background: darken($light-blue, 15%);
+        }
+
+        &.is-active {
+            background: $light-blue;
+        }
+    }
+
+    &__container {
+        padding: 4rem 0;
+    }
+
+    &__content {
+
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .tabs {
+        &__control {
+            .wrapper {
+                flex-direction: row;
+                width: inherit;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.people {
+    display: flex;
+
+    &__tile {
+        background: $dark-blue;
+        background-position: center top;
+        background-size: cover;
+        flex-basis: 23%;
+        min-height: 200px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: $dark-blue;
+            opacity: .75;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .3s;
+        }
+
+        &:hover::before {
+            opacity: .6;
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 1rem;
+        color: $white;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    &__name {
+        @extend .slab;
+        font-size: 1.2rem;
+    }
+
+    &__title {
+        font-size: .8rem;
+        margin-top: .5rem;
+    }
+}
